@@ -22,16 +22,19 @@
 - [ ] イベント名とプロパティをドキュメント化した
 - [ ] 最低限のダッシュボード（KPI）を用意した
 - [ ] 同意/クッキー等の扱いが必要なら対応した（地域要件次第）
+- [ ] UTMの命名ルールを決めた（可能なら）
 
 参考テンプレ:
 
 - [docs/ANALYTICS_SPEC_TEMPLATE.md](ANALYTICS_SPEC_TEMPLATE.md)
+- [docs/SEO_GTM_CHECKLIST.md](SEO_GTM_CHECKLIST.md)
 
 ## 4. 運用（Ops）
 
 - [ ] エラーログを確認できる（最低限）
 - [ ] 監視/アラート（最低限）を用意した（例：障害時に気づける）
 - [ ] ロールバック手順（前の版へ戻す）を決めた
+- [ ] バックアップ/復旧の方針がある（可能な範囲で）
 - [ ] `.env.example` が揃っている
 - [ ] README にローカル起動手順がある
 
@@ -39,6 +42,7 @@
 
 - [docs/RUNBOOK_TEMPLATE.md](RUNBOOK_TEMPLATE.md)
 - [.env.example](../.env.example)
+- [docs/DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)
 
 ## 5. マーケ・導線
 
@@ -46,10 +50,12 @@
 - [ ] スクリーンショット/使い方が1つ以上ある
 - [ ] CTA（登録/開始/購入）が明確
 - [ ] 投稿計画（最初の1週間分）を決めた
+- [ ] 最低限のSEO/OGが整っている（できる範囲で）
 
 参考テンプレ:
 
 - [docs/GROWTH_PLAYBOOK.md](GROWTH_PLAYBOOK.md)
+- [docs/SEO_GTM_CHECKLIST.md](SEO_GTM_CHECKLIST.md)
 
 ## 6. リリース手順（当日）
 
