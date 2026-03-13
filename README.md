@@ -15,6 +15,16 @@
 
 - [docs/00_START_HERE.md](docs/00_START_HERE.md)
 
+補助（迷ったら）:
+
+- 技術選定: [docs/TECH_STACK_DECISION.md](docs/TECH_STACK_DECISION.md)
+- デプロイ: [docs/DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md)
+- SEO/GTM: [docs/SEO_GTM_CHECKLIST.md](docs/SEO_GTM_CHECKLIST.md)
+- 問い合わせ運用: [docs/CUSTOMER_SUPPORT_PLAYBOOK.md](docs/CUSTOMER_SUPPORT_PLAYBOOK.md)
+- 障害ふりかえり: [docs/POSTMORTEM_TEMPLATE.md](docs/POSTMORTEM_TEMPLATE.md)
+
+各ドキュメントの「いつ使うか / 何を書くか（最低限）」は、[docs/00_START_HERE.md](docs/00_START_HERE.md) の「ドキュメントの使い方」表にまとめています。
+
 ## リポジトリのファイル構成と各ファイルの役割
 
 ### 全体構成
@@ -38,6 +48,8 @@
 │  ├─ pull_request_template.md
 │  └─ ISSUE_TEMPLATE/
 │     ├─ bug_report.md
+│     ├─ experiment.md
+│     ├─ incident.md
 │     └─ feature_request.md
 └─ docs/
    ├─ 00_START_HERE.md
@@ -47,6 +59,11 @@
    ├─ ANALYTICS_SPEC_TEMPLATE.md
    ├─ RUNBOOK_TEMPLATE.md
    ├─ GROWTH_PLAYBOOK.md
+   ├─ TECH_STACK_DECISION.md
+   ├─ DEPLOYMENT_GUIDE.md
+   ├─ SEO_GTM_CHECKLIST.md
+   ├─ CUSTOMER_SUPPORT_PLAYBOOK.md
+   ├─ POSTMORTEM_TEMPLATE.md
    ├─ development.md
    ├─ architecture.md
    └─ ai-guidelines.md
@@ -64,13 +81,18 @@
 - [docs/ANALYTICS_SPEC_TEMPLATE.md](docs/ANALYTICS_SPEC_TEMPLATE.md): 計測仕様（イベント/プロパティ/KPI）
 - [docs/RUNBOOK_TEMPLATE.md](docs/RUNBOOK_TEMPLATE.md): 運用手順（障害対応/ロールバック/問い合わせ）
 - [docs/GROWTH_PLAYBOOK.md](docs/GROWTH_PLAYBOOK.md): 集客/改善を週次で回す型
+- [docs/TECH_STACK_DECISION.md](docs/TECH_STACK_DECISION.md): 技術選定（迷ったらのデフォルト）
+- [docs/DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md): デプロイ/環境変数/ロールバック
+- [docs/SEO_GTM_CHECKLIST.md](docs/SEO_GTM_CHECKLIST.md): SEO/配布導線（最低限）
+- [docs/CUSTOMER_SUPPORT_PLAYBOOK.md](docs/CUSTOMER_SUPPORT_PLAYBOOK.md): 問い合わせ運用の型
+- [docs/POSTMORTEM_TEMPLATE.md](docs/POSTMORTEM_TEMPLATE.md): 障害ふりかえり（再発防止）
 - [docs/development.md](docs/development.md): 開発の進め方（派生リポジトリで具体化）
 - [docs/ai-guidelines.md](docs/ai-guidelines.md): AIに渡す情報のコツ
 
 #### .github/（CopilotとGitHub運用の型）
 
 - [.github/copilot-instructions.md](.github/copilot-instructions.md): Copilotの出力形式/制約/優先度
-- [.github/ISSUE_TEMPLATE/](.github/ISSUE_TEMPLATE/): Issueテンプレ（バグ/機能）
+- [.github/ISSUE_TEMPLATE/](.github/ISSUE_TEMPLATE/): Issueテンプレ（バグ/機能/実験/障害）
 - [.github/pull_request_template.md](.github/pull_request_template.md): PRテンプレ（確認漏れを減らす）
 
 #### 直下のポリシー/案内
@@ -81,6 +103,9 @@
 - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md): 行動規範
 - [.env.example](.env.example): 環境変数の雛形（秘密情報はコミットしない）
 - [CHANGELOG.md](CHANGELOG.md): 変更履歴（最小フォーマット）
+  - いつ書く: PRをマージするたびに `Unreleased` に1行追記
+  - 何を書く: ユーザー影響のある変更だけ（1変更=1行、長文にしない）
+  - リリース時: `Unreleased` の箇条書きを新しいバージョン節（例: `0.1.1`）に移して、`Unreleased` を空に戻す
 
 #### 開発環境の統一（基本は触らない）
 
